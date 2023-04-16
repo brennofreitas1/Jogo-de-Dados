@@ -44,9 +44,9 @@ const btRodarDado = () => {
   
   if (rodadaAtual > 10) {
     if (vitoriasJogador1 > vitoriasJogador2) {
-      alert("O jogador 1 venceu a partida! com " + vitoriasJogador1 + " vitórias!");
+      alert("O jogador 1 venceu a partida!" <br> + vitoriasJogador1 + " vitórias!");
     } else if (vitoriasJogador2 > vitoriasJogador1) {
-      alert("O jogador 2 venceu a partida! com " + vitoriasJogador2 + " vitórias!");
+      alert("O jogador 2 venceu a partida!" <br> + vitoriasJogador2 + " vitórias!");
     } else {
       alert("A partida terminou empatada!");
     }
