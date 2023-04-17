@@ -2,12 +2,14 @@ const Buttom = document.getElementById('teclar');
 const chamar = document.getElementById('chamar');
 const Buttom2 = document.getElementById('teclar2');
 const chamar2 = document.getElementById('chamar2');
+const reiniciar = document.getElementById('reiniciar')
 let jogadorAtual = 1;
 let resultadoJogador1 = 0;
 let resultadoJogador2 = 0;
 let vitoriasJogador1 = 0;
 let vitoriasJogador2 = 0;
 let rodadaAtual = 1;
+let rodada = 0;
 
 const btRodarDado = () => {
   if (jogadorAtual === 1){
@@ -54,6 +56,21 @@ const btRodarDado = () => {
     vitoriasJogador1 = 0;
     vitoriasJogador2 = 0;
   }
-};
+}
+
+function clickReiniciar() {
+  rodada = 0;
+  resultadoJogador1 = 0;
+  resultadoJogador2 = 0;
+  vitoriasJogador1 = 0;
+  vitoriasJogador2 = 0;
+  rodadaAtual = 1;
+  chamar.innerHTML= ""
+  chamar2.innerHTML= ""
+
+  alert("Jogo reiniciado!")
+}
+
   Buttom.addEventListener('click', btRodarDado);
   Buttom2.addEventListener('click', btRodarDado);
+  reiniciar.addEventListener('click', clickReiniciar);
